@@ -1,0 +1,137 @@
+<svg width="1200" height="1600" viewBox="0 0 1200 1600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Sofia+Sans:wght@400;500&display=swap');
+    .title { font-family: 'Poppins', sans-serif; fill: #262626; font-size: 56px; font-weight: 600; }
+    .subtitle { font-family: 'Sofia Sans', sans-serif; fill: #5C5C5C; font-size: 28px; font-weight: 500; }
+    .label { font-family: 'Sofia Sans', sans-serif; fill: #262626; font-size: 24px; }
+    .value { font-family: 'Poppins', sans-serif; fill: #262626; font-size: 32px; font-weight: 600; }
+    .small { font-family: 'Sofia Sans', sans-serif; fill: #5C5C5C; font-size: 20px; }
+    .legend-label { font-family: 'Sofia Sans', sans-serif; fill: #262626; font-size: 22px; }
+    .phase-text { font-family: 'Sofia Sans', sans-serif; fill: #FFFFFF; font-size: 22px; font-weight: 500; }
+    .divider { stroke: #C3C1C5; stroke-width: 2; stroke-dasharray: 8 12; }
+  </style>
+
+  <!-- Header -->
+  <text class="title" x="600" y="120" text-anchor="middle">Study Design &amp; Patient Progression</text>
+  <text class="subtitle" x="600" y="170" text-anchor="middle">Visual summary of participant flow from screening to analysis</text>
+
+  <!-- Legend -->
+  <rect x="160" y="210" width="880" height="130" rx="24" fill="#C3C1C5" fill-opacity="0.3" stroke="#C3C1C5" stroke-width="2" />
+  <circle cx="240" cy="275" r="16" fill="#F4752B" />
+  <text class="legend-label" x="280" y="283">Enrollment &amp; Screening</text>
+  <circle cx="530" cy="275" r="16" fill="#FFAA33" />
+  <text class="legend-label" x="570" y="283">Randomization &amp; Allocation</text>
+  <circle cx="820" cy="275" r="16" fill="#52B3A6" />
+  <text class="legend-label" x="860" y="283">Treatment &amp; Follow-up</text>
+
+  <circle cx="240" cy="325" r="16" fill="#40CCDD" />
+  <text class="legend-label" x="280" y="333">Outcomes &amp; Analysis</text>
+  <circle cx="530" cy="325" r="16" fill="#227976" />
+  <text class="legend-label" x="570" y="333">Completed</text>
+  <circle cx="820" cy="325" r="16" fill="#262626" />
+  <text class="legend-label" x="860" y="333" fill="#262626">Discontinued</text>
+
+  <!-- Study Timeline -->
+  <line x1="200" y1="420" x2="1000" y2="420" class="divider" />
+  <g transform="translate(200,370)">
+    <rect x="0" y="0" width="200" height="100" rx="20" fill="#F4752B" />
+    <text class="phase-text" x="100" y="58" text-anchor="middle">Screening</text>
+  </g>
+  <g transform="translate(420,370)">
+    <rect x="0" y="0" width="200" height="100" rx="20" fill="#FFAA33" />
+    <text class="phase-text" x="100" y="58" text-anchor="middle">Randomization</text>
+  </g>
+  <g transform="translate(640,370)">
+    <rect x="0" y="0" width="200" height="100" rx="20" fill="#52B3A6" />
+    <text class="phase-text" x="100" y="50" text-anchor="middle">Treatment</text>
+    <text class="phase-text" x="100" y="78" text-anchor="middle">(24 weeks)</text>
+  </g>
+  <g transform="translate(860,370)">
+    <rect x="0" y="0" width="200" height="100" rx="20" fill="#40CCDD" />
+    <text class="phase-text" x="100" y="58" text-anchor="middle">Follow-up</text>
+  </g>
+
+  <!-- Enrollment Overview -->
+  <rect x="160" y="520" width="880" height="220" rx="28" fill="#FFFFFF" stroke="#C3C1C5" stroke-width="2" />
+  <text class="value" x="220" y="585">320</text>
+  <text class="label" x="220" y="620">Participants screened</text>
+  <line x1="360" y1="550" x2="360" y2="690" stroke="#C3C1C5" stroke-width="2" stroke-dasharray="6 10" />
+  <text class="value" x="420" y="585">20</text>
+  <text class="label" x="420" y="620">Screen failures</text>
+  <line x1="560" y1="550" x2="560" y2="690" stroke="#C3C1C5" stroke-width="2" stroke-dasharray="6 10" />
+  <text class="value" x="620" y="585">300</text>
+  <text class="label" x="620" y="620">Eligible for randomization</text>
+  <line x1="760" y1="550" x2="760" y2="690" stroke="#C3C1C5" stroke-width="2" stroke-dasharray="6 10" />
+  <text class="value" x="820" y="585">280</text>
+  <text class="label" x="820" y="620">Consented to participate</text>
+  <text class="small" x="220" y="660">Primary inclusion: adults 18-65 with condition X</text>
+  <text class="small" x="420" y="690">Key exclusions: uncontrolled comorbidities, prior therapy Y</text>
+
+  <!-- Flow Diagram -->
+  <g transform="translate(160,780)">
+    <!-- Randomization node -->
+    <rect x="280" y="0" width="320" height="120" rx="24" fill="#FFAA33" />
+    <text class="value" x="440" y="50" text-anchor="middle" fill="#262626">Randomized</text>
+    <text class="value" x="440" y="92" text-anchor="middle" fill="#262626">n = 280</text>
+
+    <!-- Enrollment input -->
+    <path d="M160 0 V -120" stroke="#F4752B" stroke-width="6" />
+    <circle cx="160" cy="-120" r="26" fill="#F4752B" />
+    <text class="value" x="160" y="-130" text-anchor="middle" fill="#FFFFFF">300</text>
+    <text class="small" x="160" y="-90" text-anchor="middle" fill="#FFFFFF">Eligible</text>
+
+    <!-- Arm A -->
+    <path d="M440 120 L220 200" stroke="#C3C1C5" stroke-width="4" stroke-dasharray="10 10" />
+    <g transform="translate(40,200)">
+      <rect x="0" y="0" width="360" height="160" rx="24" fill="#52B3A6" />
+      <text class="value" x="180" y="58" text-anchor="middle" fill="#FFFFFF">Arm A</text>
+      <text class="value" x="180" y="104" text-anchor="middle" fill="#FFFFFF">n = 140</text>
+    </g>
+    <path d="M220 360 V 460" stroke="#C3C1C5" stroke-width="4" stroke-dasharray="10 10" />
+    <circle cx="220" cy="460" r="8" fill="#FFAA33" />
+    <path d="M220 460 H 130" stroke="#C3C1C5" stroke-width="4" stroke-dasharray="10 10" />
+    <path d="M220 460 H 390" stroke="#C3C1C5" stroke-width="4" stroke-dasharray="10 10" />
+    <g transform="translate(0,460)">
+      <rect x="40" y="0" width="180" height="120" rx="24" fill="#227976" />
+      <text class="value" x="130" y="52" text-anchor="middle" fill="#FFFFFF">Completed</text>
+      <text class="value" x="130" y="96" text-anchor="middle" fill="#FFFFFF">n = 128</text>
+    </g>
+    <g transform="translate(260,460)">
+      <rect x="40" y="0" width="180" height="120" rx="24" fill="#262626" />
+      <text class="value" x="130" y="52" text-anchor="middle" fill="#FFFFFF">Discontinued</text>
+      <text class="value" x="130" y="96" text-anchor="middle" fill="#FFFFFF">n = 12</text>
+    </g>
+    <text class="small" x="140" y="620" text-anchor="middle">Reasons: adverse events (5), consent withdrawn (4), protocol deviation (3)</text>
+
+    <!-- Arm B -->
+    <path d="M440 120 L660 200" stroke="#C3C1C5" stroke-width="4" stroke-dasharray="10 10" />
+    <g transform="translate(460,200)">
+      <rect x="0" y="0" width="360" height="160" rx="24" fill="#40CCDD" />
+      <text class="value" x="180" y="58" text-anchor="middle" fill="#FFFFFF">Arm B</text>
+      <text class="value" x="180" y="104" text-anchor="middle" fill="#FFFFFF">n = 140</text>
+    </g>
+    <path d="M640 360 V 460" stroke="#C3C1C5" stroke-width="4" stroke-dasharray="10 10" />
+    <circle cx="640" cy="460" r="8" fill="#FFAA33" />
+    <path d="M640 460 H 550" stroke="#C3C1C5" stroke-width="4" stroke-dasharray="10 10" />
+    <path d="M640 460 H 810" stroke="#C3C1C5" stroke-width="4" stroke-dasharray="10 10" />
+    <g transform="translate(420,460)">
+      <rect x="40" y="0" width="180" height="120" rx="24" fill="#227976" />
+      <text class="value" x="130" y="52" text-anchor="middle" fill="#FFFFFF">Completed</text>
+      <text class="value" x="130" y="96" text-anchor="middle" fill="#FFFFFF">n = 122</text>
+    </g>
+    <g transform="translate(680,460)">
+      <rect x="40" y="0" width="180" height="120" rx="24" fill="#262626" />
+      <text class="value" x="130" y="52" text-anchor="middle" fill="#FFFFFF">Discontinued</text>
+      <text class="value" x="130" y="96" text-anchor="middle" fill="#FFFFFF">n = 18</text>
+    </g>
+    <text class="small" x="700" y="620" text-anchor="middle">Reasons: lack of efficacy (7), consent withdrawn (6), lost to follow-up (5)</text>
+  </g>
+
+  <!-- Outcomes & Analysis -->
+  <rect x="160" y="1420" width="880" height="140" rx="28" fill="#FFFFFF" stroke="#C3C1C5" stroke-width="2" />
+  <text class="value" x="220" y="1485">Primary Endpoint</text>
+  <text class="small" x="220" y="1520">Change in symptom score at week 24</text>
+  <text class="value" x="620" y="1485">Secondary Endpoints</text>
+  <text class="small" x="620" y="1520">Quality of life, biomarker response, safety profile</text>
+  <text class="label" x="220" y="1570">Intention-to-treat analysis performed on all randomized participants.</text>
+</svg>
